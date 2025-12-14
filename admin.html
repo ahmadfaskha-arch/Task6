@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>لوحة التحكم </title>
+</head>
+<body>
+    <header>
+        <nav class="nav_bar">
+        <h1>لوحة التحكم   </h1>
+        <button><a href="index.html">العودة الى المتجر </a></button>
+        </nav>
+    </header>
+    <section class="form">
+        <form action="" id="productForm" class="productForm">
+            <label for="productName">اسم المنتج: </label>
+            <input type="text" id="productName">
+            <label for="productCategory">الفئة: </label>
+            <select name="" id="productCategory">
+                <option value="clothes">ملابس</option>
+                <option value="elctronic">الكترونيات</option>
+            </select>
+            <label for="productPric">سعر المنتج: </label>
+            <input type="text" id="productPric" >
+            <label for="productImg">صورةالمنتج: </label>
+            <input type="text" id="productImg">
+            <input type="submit" value="اضف">
+
+        </form>
+    </section>
+    <section class="table">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>اسم المنتج</th>
+                    <th>الفئة</th>
+                    <th>السعر</th>
+                    <th>رابط الصورة</th>
+                    <th>الاجراءات</th>
+                    
+                    
+                </tr>
+            </thead>
+            <tbody >
+                <!-- يتم وضع قيم في الجافا  -->
+            </tbody>
+        </table>
+    </section>
+    <script src="./assets/js/admin.js"></script>
+</body>
+</html>

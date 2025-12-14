@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>المتجر الالكتروني </title>
+</head>
+<body>
+    <header>
+        <nav class="nav_bar">
+        <h1>متجري الخاص  </h1>
+        <button><a href="admin.html">الذهاب الى لوحة التحكم  </a></button>
+        </nav>
+    </header>
+
+    <section>
+        <div class="filtter">
+        <input type="search" id="searchInput" class="searchInput" placeholder="ابحث هنا ">
+        <select  id="searchFilter" class="searchFilter">
+            <option value="all">كل الفئات</option>
+            <option value="phone">الموبايلات</option>
+            <option value="laptop">لابتوبات</option>
+            <option value="clothes">ملابس</option>
+        </select>
+
+        <select  id="sortByPric">
+            <option value="low">الاخفض سعرا</option>
+            <option value="height">الاعلى سعرا</option>
+        </select>
+    </div>
+    </section>
+<!-- start slider -->
+<section class="sliders">
+    <div class="slider">
+        <div class="slid">
+            <div class="slider-wrapper"></div>
+        </div>
+    </div>
+
+    <div class="btns">
+        <button class="btns_style" id="prev">السابق</button>
+        <button class="btns_style" id="next">التالي</button>
+    </div>
+</section>
+<!-- start section product -->
+    <section class="product">
+    <h2 class="title">المنتجات</h2>
+    <div id="productsContainer" class="products-grid">
+
+    </div>
+    </section>
+
+
+
+    <script src="./assets/js/sceipt.js"></script>
+</body>
+</html>
