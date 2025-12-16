@@ -36,7 +36,14 @@ localStorage.setItem("product" ,JSON.stringify([
       category : "phone",
       image : "https://images.pexels.com/photos/13570143/pexels-photo-13570143.jpeg"
 },
-    
+{
+  id :6,
+  name : "laptopasus",
+  price : 450,
+  category : "laptop",
+  image : "https://images.pexels.com/photos/14328581/pexels-photo-14328581.jpeg"
+},
+
 
 ]))
 // localStorage.clear()
@@ -84,25 +91,39 @@ const read = () => {
 }
 read()
 
+
+
 let count = 0;
+const numCards = 3;    
+
 const moveslid = () => {
-  slider.style.transform = `translateX(-${100 * count}%)`;
+  const card = document.querySelector(".product-card");
+  if (!card) return;
+
+  const gap = 20; 
+  const cardWidth = card.offsetWidth + gap;
+
+  slider.style.transform = `translateX(-${count * cardWidth}px)`;
 };
 
-
 next.addEventListener("click", () => {
-  if (count === filteredProduct.length - 1) 
-    count = 0;
-  else count++;
-  moveslid();
+  if (count < filteredProduct.length - numCards) {
+    count += numCards; 
+    if (count > filteredProduct.length - numCards) {
+      count = filteredProduct.length - numCards;
+    }
+    moveslid();
+    console.log(next);
+  }
 });
 
 prev.addEventListener("click", () => {
-  if (count === 0) count = filteredProduct.length - 1;
-  else count--;
-  moveslid();
+  if (count > 0) {
+    count -= numCards;   
+    if (count < 0) count = 0;
+    moveslid();
+  }
 });
-
 
 // تابع للبحث 
 searchInput.addEventListener("input", () => {
